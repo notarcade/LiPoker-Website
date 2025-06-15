@@ -1,0 +1,73 @@
+.membership-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-gray);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.membership-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.membership-info .material-icons-outlined {
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.membership-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: -16px;
+}
+
+.membership-status {
+    font-size: 14px;
+    color: var(--light-gray);
+}
+
+.membership-btn {
+    padding: 8px 28px;
+    font-size: 14px;
+    font-family: 'Switzer', sans-serif;
+    background: var(--red);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.membership-btn:hover {
+    opacity: 0.8;
+}
+
+.cancel-btn {
+    padding: 10px 28px;
+    font-size: 14px;
+    font-family: 'Switzer', sans-serif;
+    background: var(--mid-gray);
+    border: none;
+    border-radius: 5px;
+    color: var(--red);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cancel-btn:hover {
+    opacity: 0.8;
+}

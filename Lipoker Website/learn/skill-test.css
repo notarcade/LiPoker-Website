@@ -1,0 +1,125 @@
+.skill-test {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.skill-test h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.skill-test .subheading {
+  font-size: 1rem;
+  color: var(--light-gray);
+  margin-bottom: 2.5rem;
+}
+
+.question {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.question.active {
+  display: block;
+}
+
+.question h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background: var(--midder-gray);
+  font-family: var(--font-primary);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.options button:hover {
+  border: 2px solid var(--red);
+}
+
+.options button.selected {
+  background: var(--red);
+  transform: scale(0.98);
+}
+
+.result-box {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--dark-gray);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  opacity: 0;
+}
+
+.result-box.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.result-box p {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
+
+.goto-course {
+  background: var(--red);
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.goto-course:hover {
+  background: #ff4d4d;
+}
+
+.restart {
+  background: none;
+  border: none;
+  color: var(--light-gray);
+  margin-top: 1.4rem;
+  display: inline-block;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.restart:hover {
+  color: var(--red);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-out {
+  animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}

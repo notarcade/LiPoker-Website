@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipoker | Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=arrow_forward"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <h1>The Ultimate Free-to-Play Poker Experience</h1>
+        <p>Play poker online, improve your skills, and compete with players worldwide on Lipoker.live</p>
+        <div class="buttons">
+            <button class="sign-up" onclick="window.location.href='/auth/signup.html'">Sign Up Free</button>
+            <button class="play-now" onclick="window.location.href='play.html'">Play Now</button>
+            <button class="learn-poker" onclick="window.location.href='play.html'">Learn Poker</button>
+        </div>
+    </header>
+    <section class="why-play">
+        <h2>Why Play on Lipoker?</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="icons/global.png" alt="Play Online">
+                </div>
+                <h3>Play Online</h3>
+                <h4>Join thousands of players in casual or competitive matches.</h4>
+                <p>Play Texas Hold'em with players from around the world. Create private games with friends or join the competitive queue to test your skills.</p>
+                <button class="learn-more" onclick="window.location.href='play.html'">
+                    Play Now <span class="material-symbols-outlined arrow">arrow_forward</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="icons/network_intelligence.png" alt="Train Your Skills">
+                </div>
+                <h3>Train Your Skills</h3>
+                <h4>Improve with interactive training tools and challenges.</h4>
+                <p>Enhance your poker skills with our training tools. Practice hand reading, equity calculations, and decision-making with our interactive challenges.</p>
+                <button class="learn-more" onclick="window.location.href='play.html'">
+                    Start Training <span class="material-symbols-outlined arrow">arrow_forward</span>
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="icons/stats.png" alt="Track Progress">
+                </div>
+                <h3>Track Progress</h3>
+                <h4>Monitor your performance with detailed statistics.</h4>
+                <p>Track your poker journey with comprehensive statistics. Analyze your play style, identify leaks, and watch your Elo rating climb as you improve.</p>
+                <button class="learn-more" onclick="window.location.href='play.html'">
+                    View Stats <span class="material-symbols-outlined arrow">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="game-modes">
+        <h2>Game Modes</h2>
+        <p>Explore the different ways to play poker on Lipoker. Whether you're looking for casual games, competitive tournaments, or private matches with friends, we have a mode for you.</p>
+
+        <div class="modes-grid">
+            <div class="mode-card">
+                <h3>Multiplayer</h3>
+                <h4>Play Against Real Players</h4>
+                <p>Compete in live games with other players in real-time via WebSockets.</p>
+                <ul>
+                    <li>Join public tables or create private matches</li>
+                    <li>Real-time chat and interactive gameplay</li>
+                    <li>Ranked and casual game modes available</li>
+                </ul>
+            </div>
+
+            <div class="mode-card">
+                <h3>Private Game</h3>
+                <h4>Invite Your Friends</h4>
+                <p>Create a private table and invite your friends to play in a secure, custom environment.</p>
+                <ul>
+                    <li>Customizable blinds and buy-ins</li>
+                    <li>Invite-only access for private games</li>
+                    <li>Supports up to 10 players per table</li>
+                </ul>
+            </div>
+
+            <div class="mode-card">
+                <h3>Tournament</h3>
+                <h4>High-Stakes Competition</h4>
+                <p>Compete in multi-table tournaments with increasing blinds and test your poker skills.</p>
+                <ul>
+                    <li>Structured tournament format</li>
+                    <li>Progressive blind levels</li>
+                    <li>Leaderboard tracking for top players</li>
+                </ul>
+            </div>
+
+            <div class="mode-card">
+                <h3>Practice Mode</h3>
+                <h4>Sharpen Your Skills</h4>
+                <p>Improve your poker strategy by playing against AI opponents with adjustable difficulty.</p>
+                <ul>
+                    <li>AI opponents with different play styles</li>
+                    <li>Hand analysis and strategy tips</li>
+                    <li>Perfect for beginners and advanced players</li>
+                </ul>
+            </div>
+
+            <div class="mode-card">
+                <h3>Speed Poker</h3>
+                <h4>Fast-Paced Action</h4>
+                <p>A high-speed poker mode where decisions are quick and hands move rapidly.</p>
+                <ul>
+                    <li>Shorter time limits for decisions</li>
+                    <li>Rapid-fire gameplay for quick matches</li>
+                    <li>Ideal for players who love fast action</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <h2>Ready to Join the Table?</h2>
+        <p>Start playing now for free, no download required. Join thousands of players already online.</p>
+        <button class="cta-button" onclick="window.location.href='play.html'">Play Now</button>
+    </section>
+</body>
+</html>

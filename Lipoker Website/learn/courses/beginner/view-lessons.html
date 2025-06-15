@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiPoker | Beginner Course Lessons</title>
+  <link rel="stylesheet" href="/universal.css" />
+  <link rel="stylesheet" href="beginner-course.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <a href="/home.html"><span class="white">Li</span><span class="red">poker</span></a>
+      </div>
+      <div class="nav-links">
+        <a class="active" href="/main/play.html">Play</a>
+        <a href="/main/learn.html">Learn</a>
+        <a href="/main/leaderboards.html">Leaderboards</a>
+        <a href="/main/premium.html">Premium</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="auth-buttons">
+        <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+        <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="view-lessons-container">
+    <h1>Beginner Course Lessons</h1>
+    <p class="course-progress">Progress: <span id="progress-value">0%</span></p>
+
+    <div class="lessons-grid">
+      <div class="lesson-card unlocked" onclick="goToLesson('lesson-1.html')">
+        <h2>Lesson 1: Introduction to Poker</h2>
+        <p>Start learning the basics of poker — from what poker is to understanding Texas Hold’em.</p>
+      </div>
+      <!-- Add more unlocked/locked lessons similarly -->
+    </div>
+  </main>
+
+  <script>
+    function goToLesson(file) {
+      window.location.href = file;
+    }
+  </script>
+</body>
+</html>

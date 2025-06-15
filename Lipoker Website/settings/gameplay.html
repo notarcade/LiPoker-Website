@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Gameplay Settings</title>
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="settings-universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Round&family=Material+Icons+Sharp&family=Material+Icons+Two+Tone" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-view">
+        <div class="settings-container">
+            <aside class="settings-sidebar">
+                <h2 class="settings-title">Settings</h2>
+                <ul>
+                    <a href="/settings/profile.html">
+                        <li><span class="material-icons-outlined">account_circle</span> Profile</li>
+                    </a>
+                    <a href="/settings/gameplay.html">
+                        <li class="selected-nav"><span class="material-icons-outlined">sports_esports</span> Gameplay</li>
+                    </a>
+                    <a href="/settings/social.html">
+                        <li><span class="material-icons-outlined">group</span> Social</li>
+                    </a>
+                    <a href="/settings/notifications.html">
+                        <li><span class="material-icons-outlined">notifications</span> Notifications</li>
+                    </a>
+                    <a href="/settings/membership.html">
+                        <li><span class="material-icons-outlined">diamond</span> Membership</li>
+                    </a>
+                </ul>
+                <div class="navbar-separator"></div>
+            </aside>
+
+            <main class="settings-content">
+                <h2>Gameplay Settings</h2>
+                <p class="settings-subtext">Customize how your poker experience works.</p>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Auto-Muck Losing Hands</p>
+                        <div class="toggle" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Auto-Rebuy for Cash Games</p>
+                        <div class="toggle" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Show Opponent’s Stack Sizes in Big Blinds</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Hotkeys for Betting</p>
+                        <div class="toggle" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Confirm All-In Actions</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Bet Sizing Suggestions</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Show Hand Strength After Reveal</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Straddle Option in Cash Games</p>
+                        <div class="toggle" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Enable Rakeback Tracking</p>
+                        <div class="toggle" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Betting & Gameplay Preferences</h2>
+
+                <section class="dropdown-section">
+                    <label for="betting-style">Betting Method</label>
+                    <div class="custom-dropdown">
+                        <select id="betting-style">
+                            <option selected>Fixed Bet Amounts</option>
+                            <option>Pot-Based Betting</option>
+                            <option>Custom Betting Controls</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="dealer-actions">Dealer Handling</label>
+                    <div class="custom-dropdown">
+                        <select id="dealer-actions">
+                            <option selected>Auto-Deal Next Hand</option>
+                            <option>Manual Deal Confirmation</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="showdown-options">Showdown Visibility</label>
+                    <div class="custom-dropdown">
+                        <select id="showdown-options">
+                            <option selected>Auto-Reveal Winning Hand</option>
+                            <option>Manual Reveal Choice</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="blind-structure">Blind Format</label>
+                    <div class="custom-dropdown">
+                        <select id="blind-structure">
+                            <option selected>Standard Blinds</option>
+                            <option>Ante-Only Format</option>
+                            <option>Big Blind Ante</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="card-dealing">Card Dealing Method</label>
+                    <div class="custom-dropdown">
+                        <select id="card-dealing">
+                            <option selected>Standard Auto-Deal</option>
+                            <option>Manual Deal by Dragging</option>
+                            <option>Tap to Confirm Deal</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="showdown-mode">Showdown Handling</label>
+                    <div class="custom-dropdown">
+                        <select id="showdown-mode">
+                            <option selected>Instant Reveal</option>
+                            <option>Click to Show Cards</option>
+                            <option>Auto-Muck Losing Hands</option>
+                        </select>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Challenge & Matchmaking Settings</h2>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Auto-Accept Rematches</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="table-invitations">Allow Table Invitations</label>
+                    <div class="custom-dropdown">
+                        <select id="table-invitations">
+                            <option>Everyone</option>
+                            <option selected>Friends Only</option>
+                            <option>Nobody</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Preferred Match Type</p>
+                    </div>
+                    <div class="switch-group">
+                        <label class="switch-option"><input type="radio" name="match-type" checked><span>Normal</span></label>
+                        <label class="switch-option"><input type="radio" name="match-type"><span>Tournament</span></label>
+                        <label class="switch-option"><input type="radio" name="match-type"><span>Both</span></label>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Challenge Alerts</p>
+                    </div>
+                    <div class="switch-group">
+                        <label class="switch-option"><input type="radio" name="game-chat"><span>Everyone</span></label>
+                        <label class="switch-option"><input type="radio" name="game-chat" checked><span>Friends Only</span></label>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Hand Analysis & Decision Insights</h2>
+
+                <!-- Engine Evaluation - Disabled -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Engine Evaluation</p>
+                        <span style="color: var(--red); font-weight: bold;">COMING SOON!</span>
+                    </div>
+                </section>
+
+                <!-- Show post-game feedback -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Show Post-Game Feedback</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Show betting timestamps -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Show Betting Timestamps</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Show betting classification icons -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Show Decision Quality Icons</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Training History</h2>
+
+                <!-- Clear Rated Puzzle History -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Rated Puzzle History</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+
+                <!-- Clear Puzzle Rush History -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Puzzle Rush History</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+
+                <!-- Clear Endgame Scores -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Endgame Scores</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+
+                <!-- Clear Practice Position History -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Practice Position History</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+
+                <!-- Clear Bot Crowns Progress -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Bot Crowns Progress</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+
+                <!-- Clear Lessons Progress -->
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Lessons Progress</p>
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

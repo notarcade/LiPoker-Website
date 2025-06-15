@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Profile Settings</title>
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="settings-universal.css">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://cdn.tiny.cloud/1/h9mrnmnqoguc9asiv21ppanhwtdna8fa3kgdvrznobduqw6q/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Round&family=Material+Icons+Sharp&family=Material+Icons+Two+Tone" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-view">
+        <div class="settings-container">
+            <aside class="settings-sidebar">
+                <h2 class="settings-title">Settings</h2>
+                <ul>
+                    <a href="/settings/profile.html">
+                        <li class="selected-nav"><span class="material-icons-outlined">account_circle</span> Profile</li>
+                    </a>
+                    <a href="/settings/gameplay.html">
+                        <li><span class="material-icons-outlined">sports_esports</span> Gameplay</li>
+                    </a>
+                    <a href="/settings/social.html">
+                        <li><span class="material-icons-outlined">group</span> Social</li>
+                    </a>
+                    <a href="/settings/notifications.html">
+                        <li><span class="material-icons-outlined">notifications</span> Notifications</li>
+                    </a>
+                    <a href="/settings/membership.html">
+                        <li><span class="material-icons-outlined">diamond</span> Membership</li>
+                    </a>
+                </ul>
+                <div class="navbar-separator"></div>
+            </aside>
+
+            <main class="settings-content">
+
+                <section class="profile-top-section">
+                    <h2 class="section-title">Profile Settings</h2>
+                    <p class="settings-subtext">Customize your appearence & personal info on LiPoker.</p>
+
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://th.bing.com/th/id/OIP.NWKXVGrYHJoP4xsRe9FCngHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+                            <span class="change-overlay-text">
+                                <span class="material-icons-outlined">edit</span>
+                                Change Avatar
+                            </span>
+                        </div>
+                        <div class="profile-top-side">
+                            <div class="profile-info">
+                                <h3 class="profile-username">Guest</h3>
+                            </div>
+                            <div class="profile-field">
+                                <textarea id="bio" rows="3" placeholder="Write a short bio to describe yourself!"></textarea>
+                                <p class="bio-char">0/50</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <div class="divider"></div>
+
+                <section class="details-section">
+                    <h2 class="section-title">Details</h2>
+
+                    <div class="details-stack">
+                        <!-- Join Date (non-editable) -->
+                            <div class="detail-item">
+                            <label>Join Date</label>
+                            <div class="static-text">May 13, 2025</div>
+                        </div>
+
+                        <!-- Username (non-editable with Change button) -->
+                        <div class="detail-item horizontal">
+                            <div class="half-width">
+                                <label>Username</label>
+                                <div class="static-text">yesssswwwww</div>
+                            </div>
+                            <button class="change-button">Change</button>
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="detail-item">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="" />
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="detail-item">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="" />
+                        </div>
+
+                        <!-- Location -->
+                        <div class="detail-item">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="City, Province, etc" />
+                        </div>
+
+                        <!-- Country -->
+                        <section class="dropdown-section">
+                            <label for="country">Country</label>
+                            <div class="custom-dropdown">
+                                <select id="country">
+                                    <option selected>United States</option>
+                                    <option>Canada</option>
+                                    <option>United Kingdom</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </section>
+
+                        <!-- Language -->
+                        <section class="dropdown-section">
+                            <label for="language">Language</label>
+                            <div class="custom-dropdown">
+                                <select id="language">
+                                    <option selected>English</option>
+                                    <option>French</option>
+                                    <option>Spanish</option>
+                                    <option>German</option>
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <section class="account-section">
+                    <h2 class="section-title">Account Settings</h2>
+                    <p class="settings-subtext">Change your personal information, add security, and view data.</p>
+
+                    <section class="change-info">
+                        <h3>Change Personal Info</h3>
+
+                        <div class="detail-item">
+                            <label for="new-pass">New Password</label>
+                            <input type="text" id="new-pass" placeholder="" />
+                        </div>
+
+                        <div class="detail-item">
+                            <label for="conf-pass">Confirm Password</label>
+                            <input type="text" id="conf-pass" placeholder="" />
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <h3 class="space-above-acc">Contact Info</h3>
+
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Email</p>
+                                <span id="content-blur">aaaazzzz@example.com</span>
+                                <button class="change-btn">Change</button>
+                            </div>
+                        </section>
+
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Phone Number</p>
+                                <span id="phone-blur">888-888-8888</span>
+                                <button class="change-btn">Change</button>
+                            </div>
+                        </section>
+
+                        <div class="divider"></div>
+
+                        <h3 class="space-above-acc">Extra Security</h3>
+
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Log Out of All Devices</p>
+                                <button class="log-out-all-btn">Log Out</button>
+                            </div>
+                            <p class="subtext">If your account has been compromised, please log out of all other sessions.</p>
+                        </section>
+
+                        <div class="divider"></div>
+
+                        <h2>Billing Support</h2>
+                            <p class="subtext">Need help with your membership or your billing information? Contact us below!</p>
+                            
+                            <button class="a-btn">Contact Support</button>
+
+                        <div class="divider"></div>
+
+                        <h2>Delete Your Account</h2>
+                            <p class="subtext">Do you want to permanenetly delete your account for LiPoker? This action is undoable!</p>
+                            
+                            <button class="log-out-all-btn">Delete Account</button>
+
+                    </section>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function maskEmail() {
+            const emailElement = document.getElementById("content-blur");
+            const email = emailElement.textContent.trim(); // Get actual email
+
+            const [name, domain] = email.split("@");
+            if (name.length < 3) return; // Prevents issues with very short emails
+
+            const firstChar = name[0];
+            const lastChar = name[name.length - 1];
+            const maskedPart = "*".repeat(name.length - 2);
+
+            emailElement.textContent = `${firstChar}${maskedPart}${lastChar}@${domain}`;
+        }
+
+        // Run the function after the page loads
+        document.addEventListener("DOMContentLoaded", maskEmail);
+        
+        function maskPhoneNumber() {
+            const phoneElement = document.getElementById("phone-blur");
+            const original = phoneElement.textContent.trim().replace(/\D/g, ""); // digits only
+
+            if (original.length <= 4) return;
+
+            const masked = "*".repeat(original.length - 4) + original.slice(-4);
+            phoneElement.textContent = masked;
+        }
+
+        document.addEventListener("DOMContentLoaded", maskPhoneNumber);
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const bioTextarea = document.getElementById("bio");
+        const charCounter = document.querySelector(".bio-char");
+        const maxChars = 50;
+
+        bioTextarea.addEventListener("input", () => {
+            // Enforce max character limit
+            if (bioTextarea.value.length > maxChars) {
+                bioTextarea.value = bioTextarea.value.slice(0, maxChars);
+            }
+
+            // Update character count display
+            charCounter.textContent = `${bioTextarea.value.length}/${maxChars}`;
+        });
+    });
+    </script>
+</body>
+</html>

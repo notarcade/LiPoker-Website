@@ -1,0 +1,174 @@
+/* Base Leaderboard Styles */
+.leaderboard-view {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 100px;
+    color: var(--light-gray);
+    font-family: var(--font-secondary);
+}
+
+.leaderboard-container {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+}
+
+.leaderboard-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.leaderboard-header h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.leaderboard-header p {
+    font-size: 15px;
+    color: var(--gray);
+    margin-top: 0px;
+}
+
+.leaderboard-table-container {
+    position: relative;
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Fade at Bottom */
+.leaderboard-fade-bottom {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Table Styling */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: var(--light-gray);
+    table-layout: fixed; /* <- fixes layout alignment across tables */
+}
+
+.leaderboard-table thead {
+    background-color: var(--darker-gray);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 12px 16px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.leaderboard-table th:first-child,
+.leaderboard-table td:first-child {
+    width: 60px;
+    text-align: center;
+}
+
+.leaderboard-table th:nth-child(2),
+.leaderboard-table td:nth-child(2) {
+    text-align: left;
+}
+
+.leaderboard-table tbody tr {
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: #252525;
+}
+
+/* Rank Column */
+.leaderboard-table td:first-child {
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Rank Coloring via Classes */
+.leaderboard-table .rank-gold td:first-child {
+    color: gold;
+}
+
+.leaderboard-table .rank-silver td:first-child {
+    color: silver;
+}
+
+.leaderboard-table .rank-bronze td:first-child {
+    color: #cd7f32;
+}
+
+/* Flag Styling */
+.leaderboard-table img.flag {
+    width: 20px;
+    height: 15px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* Personal Rank Section */
+.personal-rank {
+    margin-top: 16px;
+}
+
+.personal-rank tr {
+    background-color: #1e1e1e;
+}
+
+.personal-rank tr td {
+    color: var(--light-gray);
+    font-weight: 500;
+    padding: 12px 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Align personal row exactly like table */
+.personal-rank {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 15px;
+}
+
+.personal-rank td:first-child {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.personal-rank td:nth-child(2) {
+    text-align: left;
+}
+
+/* Scrollbar */
+.leaderboard-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leaderboard-table-container::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+    border-radius: 10px;
+}
+
+.leaderboard-table-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}

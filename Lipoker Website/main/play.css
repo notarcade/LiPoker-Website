@@ -1,0 +1,95 @@
+
+.play-section {
+    padding: 40px 60px;
+}
+
+.play-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.game-banner {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.game-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(255, 0, 0, 0.2);
+}
+
+.game-info {
+    max-width: 60%;
+}
+
+.game-info h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.play-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--red);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    gap: 10px;
+}
+
+.play-btn:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+.play-btn .material-symbols-outlined {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover .material-symbols-outlined {
+    transform: translateX(4px);
+}
+
+.game-img {
+    width: 30%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Placeholder image backgrounds */
+.img1 {
+    background-image: url('https://images.unsplash.com/photo-1616494474700-ef50c304f4a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');
+}
+
+.img2 {
+    background-image: url('https://images.unsplash.com/photo-1603503364747-90b1d67fba34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');
+}
+
+.img3 {
+    background-image: url('https://images.unsplash.com/photo-1518544359619-1e9b8abed1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60');
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Social Settings</title>
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="settings-universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Round&family=Material+Icons+Sharp&family=Material+Icons+Two+Tone" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-view">
+        <div class="settings-container">
+            <aside class="settings-sidebar">
+                <h2 class="settings-title">Settings</h2>
+                <ul>
+                    <a href="/settings/profile.html">
+                        <li><span class="material-icons-outlined">account_circle</span> Profile</li>
+                    </a>
+                    <a href="/settings/gameplay.html">
+                        <li><span class="material-icons-outlined">sports_esports</span> Gameplay</li>
+                    </a>
+                    <a href="/settings/social.html">
+                        <li class="selected-nav"><span class="material-icons-outlined">group</span> Social</li>
+                    </a>
+                    <a href="/settings/notifications.html">
+                        <li><span class="material-icons-outlined">notifications</span> Notifications</li>
+                    </a>
+                    <a href="/settings/membership.html">
+                        <li><span class="material-icons-outlined">diamond</span> Membership</li>
+                    </a>
+                </ul>
+                <div class="navbar-separator"></div>
+            </aside>
+
+            <main class="settings-content">
+                <h2>Social Settings</h2>
+                <p class="settings-subtext">Manage communication, your privacy, and your social activity.</p>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Send and receive direct messages</p>
+                    </div>
+                    <div class="switch-group">
+                        <label class="switch-option"><input type="radio" name="direct-messages" checked><span>Everyone</span></label>
+                        <label class="switch-option"><input type="radio" name="direct-messages"><span>Only friends</span></label>
+                        <label class="switch-option"><input type="radio" name="direct-messages"><span>Nobody</span></label>
+                    </div>
+                </section>
+
+                <section class="toggle-section">
+                    <div class="toggle-wrapper">
+                        <p>Game Chat</p>
+                    </div>
+                    <div class="switch-group">
+                        <label class="switch-option"><input type="radio" name="game-chat"><span>Everyone</span></label>
+                        <label class="switch-option"><input type="radio" name="game-chat" checked><span>Request Only</span></label>
+                        <label class="switch-option"><input type="radio" name="game-chat"><span>Friends Only</span></label>
+                    </div>
+                </section>
+                
+                <div class="divider"></div>
+
+                <h2>Privacy Settings</h2>
+
+                <section class="toggle-section privacy">
+                    <div class="toggle-wrapper">
+                        <p>Allow friend requests</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')"">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section privacy">
+                    <div class="toggle-wrapper">
+                        <p>Allow friends to find you via phone contacts</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')"">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section privacy">
+                    <div class="toggle-wrapper">
+                        <p>Allow club invitations</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')"">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section privacy">
+                    <div class="toggle-wrapper">
+                        <p>Allow tournament invitations</p>
+                        <div class="toggle active" onclick="this.classList.toggle('active')"">
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="toggle-section privacy pl">
+                    <div class="toggle-wrapper">
+                        <p>Allow Challenges</p>
+                    </div>
+                    <div class="switch-group">
+                        <label class="switch-option"><input type="radio" name="challenges" checked><span>Everyone</span></label>
+                        <label class="switch-option"><input type="radio" name="challenges"><span>Only Friends</span></label>
+                        <label class="switch-option"><input type="radio" name="challenges"><span>Nobody (rematches are still allowed)</span></label>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Profile Visibility</h2>
+
+                <section class="dropdown-section">
+                    <label for="profile-visibility">Who can view my profile?</label>
+                    <div class="custom-dropdown">
+                        <select id="profile-visibility">
+                            <option selected>Everyone</option>
+                            <option>Friends Only</option>
+                            <option>Nobody</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="friends-visibility">Who can view my friends list?</label>
+                    <div class="custom-dropdown">
+                        <select id="friends-visibility">
+                            <option selected>Everyone</option>
+                            <option>Friends Only</option>
+                            <option>Nobody</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="dropdown-section">
+                    <label for="blog-visibility">Who can view my blog or posts?</label>
+                    <div class="custom-dropdown">
+                        <select id="blog-visibility">
+                            <option selected>Everyone</option>
+                            <option>Friends Only</option>
+                            <option>Nobody</option>
+                        </select>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <h2>Blocking</h2>
+                <p class="settings-subtext">You are blocking <strong>0</strong> people.</p>
+
+                <div class="divider"></div>
+
+                <h2>Following</h2>
+                <p class="settings-subtext">You are following <strong>0</strong> people.</p>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

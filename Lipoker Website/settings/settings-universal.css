@@ -1,0 +1,322 @@
+/* View Container - Wraps everything */
+.settings-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 900px;
+    max-width: 100%;
+    background-color: #0a0a0a8a;
+    border-radius: 12px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+.settings-sidebar {
+    width: 200px;
+    min-width: 180px;
+    flex-shrink: 0;
+    background-color: #0a0a0a75;
+    padding: 25px;
+    border-radius: 12px 0 0 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Vertical separator */
+    overflow-y: auto;
+}
+
+/* Settings Content */
+.settings-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        min-width: 0;
+        border-radius: 12px 12px 0 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Horizontal separator */
+    }
+
+    .settings-content {
+        width: 100%;
+    }
+}
+
+/* Sidebar Heading */
+.settings-title {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Navigation */
+.settings-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-sidebar li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Selected Navigation */
+.settings-sidebar li.selected-nav {
+    color: var(--red); /* Ensures text turns red */
+    font-weight: 700;
+
+}
+
+
+.settings-sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.07);
+}
+
+/* Sidebar Icons */
+.settings-sidebar .material-icons-outlined {
+    margin-right: 12px;
+}
+
+/* Content Section */
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #0a0a0a75;
+    border-radius: 10px;
+}
+
+/* Subtext */
+.settings-subtext {
+    color: var(--light-gray);
+    margin-top: -10px;
+}
+
+/* Toggle Section */
+.toggle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 5px;
+}
+
+/* Toggle Wrapper */
+.toggle-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Toggle */
+.toggle {
+    width: 50px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+/* Toggle Circle */
+.toggle .slider {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: 0.5px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease-in-out;
+}
+
+/* Active State */
+.toggle.active {
+    background: var(--red);
+}
+
+/* Move Circle on Toggle */
+.toggle.active .slider {
+    left: calc(100% - 24px);
+}
+
+/* Divider */
+.divider {
+    width: 90%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 50px auto;
+}
+
+/* Dropdown Section */
+.dropdown-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+/* Custom Dropdown Wrapper */
+.custom-dropdown {
+    position: relative;
+    width: 220px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Dropdown Styling */
+.custom-dropdown select {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Switzer', sans-serif;
+    font-size: 16px;
+    background: rgba(20, 20, 20, 1); /* Sleek dark background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.85); /* Crisp readable text */
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease-in-out;
+    padding-right: 20px;
+    overflow: hidden; /* Prevents text from going outside */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    white-space: nowrap; /* Keeps text in one line */
+    max-width: 220px; /* Ensures text does not go past the arrow */
+}
+
+/* Modern Dropdown Arrow */
+.custom-dropdown::after {
+    content: "⌵"; /* Stylish downward arrow */
+    position: absolute;
+    padding-bottom: 5px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7); /* Subtle color for modern feel */
+    font-size: 18px; /* Sleeker icon size */
+    pointer-events: none;
+}
+
+/* Custom Opened Dropdown Styling */
+.custom-dropdown select:focus {
+    background: rgba(35, 35, 35, 1); /* Slight glow effect */
+    border-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Soft glow */
+}
+
+/* Dropdown Options */
+.custom-dropdown select option {
+    background: rgba(25, 25, 25, 1);
+    color: white;
+}
+
+/* Switch Group */
+.switch-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    transition: opacity 0.3s ease-in-out;
+    margin-top: -25px; /* Moves switches closer to text */
+}
+
+/* Custom Radio Buttons */
+.switch-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Make radio buttons visible */
+.switch-option input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    background: transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Selected state */
+.switch-option input:checked {
+    border-color: var(--red);
+    background: var(--red);
+}
+
+/* Remove default dot */
+.switch-option input::before {
+    content: none;
+}
+
+/* Show inner dot when selected */
+.switch-option input:checked::before {
+    visibility: visible;
+}
+
+/* Properly positioned text */
+.switch-option label {
+    font-size: 16px;
+    color: white;
+}
+
+/* Default Selected Radio */
+.switch-option input:checked + .radio {
+    border-color: var(--red);
+    background: var(--red);
+}
+
+/* Reset Button Styling */
+.reset-btn {
+    padding: 10px 28px;
+    font-size: 14px;
+    font-family: 'Switzer', sans-serif;
+    background: var(--mid-gray); /* Red Reset Button */
+    border: none;
+    border-radius: 5px;
+    color: var(--red);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.reset-btn:hover {
+    opacity: 0.8;
+}

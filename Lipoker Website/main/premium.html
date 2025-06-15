@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiPoker | Premium</title>
+  <link rel="stylesheet" href="/universal.css">
+  <link rel="stylesheet" href="premium.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <a href="/home.html"><span class="white">Li</span><span class="red">poker</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="/main/play.html">Play</a>
+        <a href="/learn/skill-test.html">Learn</a>
+        <a href="/main/leaderboards.html">Leaderboard</a>
+        <a href="/main/premium.html">Premium</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="auth-buttons">
+        <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+        <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="premium-section">
+    <h1 class="premium-title">Choose Your LiPoker Membership</h1>
+
+    <div class="toggle-buttons">
+      <button class="toggle active" id="monthlyToggle">Monthly</button>
+      <button class="toggle" id="yearlyToggle">Yearly</button>
+    </div>
+
+    <div class="membership-table">
+
+      <div class="membership-card bronze basic">
+        <h2>Bronze Bluff</h2>
+        <p class="price" data-month="$5.99 / mo" data-year="$59.99 / yr">$5.99 / mo</p>
+        <ul>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Unlimited Play</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Track Stats</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Casual Tables</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Tournament Mode</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Advanced Lessons</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Hand History</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Performance Insights</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Priority Support</li>
+        </ul>
+        <button class="red-btn">Choose Plan</button>
+      </div>
+
+      <div class="membership-card silver featured">
+        <div class="badge">MOST POPULAR</div>
+        <h2>Silver Straight</h2>
+        <p class="price" data-month="$9.99 / mo" data-year="$99.99 / yr">$9.99 / mo</p>
+        <ul>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Unlimited Play</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Track Stats</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Casual Tables</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Tournament Mode</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Advanced Lessons</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Hand History</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Performance Insights</li>
+          <li class="no"><span class="material-symbols-outlined">close</span> Priority Support</li>
+        </ul>
+        <button class="red-btn">Choose Plan</button>
+      </div>
+
+      <div class="membership-card gold elite">
+        <h2>Golden Royal</h2>
+        <p class="price" data-month="$19.99 / mo" data-year="$199.99 / yr">$19.99 / mo</p>
+        <ul>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Unlimited Play</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Track Stats</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Casual Tables</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Tournament Mode</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Advanced Lessons</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Hand History</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Performance Insights</li>
+          <li class="yes"><span class="material-symbols-outlined">check</span> Priority Support</li>
+        </ul>
+        <button class="red-btn">Choose Plan</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const monthlyBtn = document.getElementById('monthlyToggle');
+    const yearlyBtn = document.getElementById('yearlyToggle');
+    const prices = document.querySelectorAll('.price');
+
+    monthlyBtn.onclick = () => {
+      monthlyBtn.classList.add('active');
+      yearlyBtn.classList.remove('active');
+      prices.forEach(p => p.textContent = p.dataset.month);
+    };
+
+    yearlyBtn.onclick = () => {
+      yearlyBtn.classList.add('active');
+      monthlyBtn.classList.remove('active');
+      prices.forEach(p => p.textContent = p.dataset.year);
+    };
+  </script>
+</body>
+</html>

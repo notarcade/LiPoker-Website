@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Membership Settings</title>
+    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="settings-universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Round&family=Material+Icons+Sharp&family=Material+Icons+Two+Tone" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-view">
+        <div class="settings-container">
+            <aside class="settings-sidebar">
+                <h2 class="settings-title">Settings</h2>
+                <ul>
+                    <a href="/settings/profile.html">
+                        <li><span class="material-icons-outlined">account_circle</span> Profile</li>
+                    </a>
+                    <a href="/settings/gameplay.html">
+                        <li><span class="material-icons-outlined">sports_esports</span> Gameplay</li>
+                    </a>
+                    <a href="/settings/social.html">
+                        <li><span class="material-icons-outlined">group</span> Social</li>
+                    </a>
+                    <a href="/settings/notifications.html">
+                        <li><span class="material-icons-outlined">notifications</span> Notifications</li>
+                    </a>
+                    <a href="/settings/membership.html">
+                        <li class="selected-nav"><span class="material-icons-outlined">diamond</span> Membership</li>
+                    </a>
+                </ul>
+                <div class="navbar-separator"></div>
+            </aside>
+
+            <main class="settings-content">
+
+            <h2>Membership Overview</h2>
+            <p class="settings-subtext">View your membership status, billing history, and payment options.</p>
+
+            <section class="membership-section">
+                <div class="membership-info">
+                    <span class="material-icons-outlined">diamond</span>
+                    <div class="membership-details">
+                        <p class="membership-title">Basic Membership</p>
+                        <p class="membership-status">Active</p>
+                    </div>
+                </div>
+                <button class="membership-btn">Upgrade</button>
+            </section>
+
+            <div class="divider"></div>
+
+            <h2>Billing History</h2>
+            <p class="settings-subtext">You have no billing history.</p>
+
+            <div class="divider"></div>
+
+            <h2>Payment Options</h2>
+            
+            <section class="membership-section">
+                <div class="membership-info">
+                    <div class="membership-details">
+                        <p class="membership-status">You have no saved payment methods.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <h2>Billing History</h2>
+                <p class="settings-subtext">Cancel your LiPoker membership. Your membership will continue until defined.</p>
+                
+                <button class="cancel-btn">Cancel Membership</button>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

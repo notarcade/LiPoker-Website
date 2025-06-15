@@ -1,0 +1,86 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipoker | Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="/universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- (navbar unchanged) -->
+    </nav>
+
+    <section class="signup-container">
+        <div class="signup-box">
+            <h2>Create an Account</h2>
+            <p class="subheading">Join thousands of players already playing</p>
+
+            <form id="signup-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="pokerpro1" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="poker@example.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="password-confirm">Confirm Password</label>
+                <input type="password" id="password-confirm" name="password-confirm" required>
+
+                <button type="submit" class="signup-button">Create account</button>
+            </form>
+
+            <div class="divider">
+                <hr class="line">
+                <span>OR CONTINUE WITH</span>
+                <hr class="line">
+            </div>
+
+            <div class="social-signup">
+                <button class="google-signup">
+                    <img src="/icons/Google_Logo_Primary.png" alt="Google Logo">
+                    Google
+                </button>
+                <button class="facebook-signup">
+                    <img src="/icons/Facebook_Logo_Primary.png" alt="Facebook Logo">
+                    Facebook
+                </button>
+            </div>
+
+            <p class="login-link">Already have an account? <a href="/auth/login.html">Log in</a></p>
+        </div>
+    </section>
+    <script>
+    document.getElementById('signup-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const email    = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirm  = document.getElementById('password-confirm').value;
+
+        if (password !== confirm) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        try {
+            const res = await fetch('http://localhost:3000/api/auth/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, email, password })
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Unknown error.");
+            window.location.href = `/users/${data.uid}/${data.username}`;
+        } catch (err) {
+            alert("Signup failed: " + err.message);
+        }
+    });
+    </script>
+</body>
+</html>

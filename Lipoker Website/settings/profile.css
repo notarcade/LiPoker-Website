@@ -1,0 +1,280 @@
+.profile-field textarea {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Switzer', sans-serif;
+    resize: none;
+    transition: border 0.3s ease-in-out;
+    line-height: 1.4;
+    height: auto;
+    min-height: 40px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: left;
+}
+
+.profile-field textarea::placeholder {
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.profile-field {
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-top-side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.profile-field textarea:focus {
+    outline: none;
+    border-color: var(--red);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile-avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.profile-avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.profile-avatar:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.profile-avatar .change-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 13px;
+    font-family: 'Switzer', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.profile-avatar:hover .change-overlay-text {
+    opacity: 1;
+}
+
+.bio-char {
+    font-size: 12px;
+    color: var(--light-gray);
+    margin-top: 0px;
+}
+
+/* DETAILS SECTION STRUCTURE */
+.details-section {
+  border-top: 1px solid var(--medium-gray);
+}
+
+.details-section .section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+/* STACKED ITEMS */
+.details-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item label {
+  color: var(--light-gray);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detail-item input,
+.detail-item select {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--medium-gray);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.detail-item input:focus,
+.detail-item select:focus {
+  border-color: var(--red);
+  background-color: #2e2e2e;
+}
+
+/* STATIC TEXT DISPLAY */
+.static-text {
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* CHANGE BUTTON */
+.change-button {
+  background-color: var(--red);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: -20px;
+}
+
+.change-button:hover {
+  opacity: 0.8;
+}
+
+/* FLEX ROW ITEM */
+.detail-item.horizontal {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* HALF-WIDTH ITEM WITHIN ROW */
+.detail-item .half-width {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* REMOVE SPINNERS FROM NUMBER FIELDS (IF USED LATER) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.change-info {
+  padding-top: 20px;
+}
+
+.change-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'Switzer', sans-serif;
+  background: var(--red);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.change-btn:hover {
+  opacity: 0.8;
+}
+
+#content-blur {
+  font-size: 14px;
+  font-family: monospace;
+}
+
+#phone-blur {
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.space-above-acc {
+  padding-top: 20px;
+}
+
+.log-out-all-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'Switzer', sans-serif;
+  background: var(--mid-gray);
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: var(--red);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.log-out-all-btn:hover {
+  opacity: 0.8;
+}
+
+.subtext {
+  color: var(--light-gray);
+  margin-top: -20px;
+  font-size: 12px;
+}
+
+.a-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'Switzer', sans-serif;
+  background: var(--red);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.a-btn:hover {
+  opacity: 0.8;
+}

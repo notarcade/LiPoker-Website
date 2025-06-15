@@ -1,0 +1,100 @@
+<!-- lesson-1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiPoker | Beginner Course</title>
+  <link rel="stylesheet" href="/universal.css" />
+  <link rel="stylesheet" href="beginner-course.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Play</a>
+                <a href="#">Learn</a>
+                <a href="#">Leaderboard</a>
+                <a href="#">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+  <div class="course-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Lesson 1:<br>Getting Started</h2>
+        <button class="sidebar-close">✕</button>
+      </div>
+      <nav class="lesson-nav">
+        <button data-slide="0">1.1: Intro to Poker</button>
+        <button data-slide="1">1.2: Hand Rankings</button>
+        <button data-slide="2">1.3: Betting Basics</button>
+      </nav>
+    </aside>
+
+    <main class="course-main">
+      <div class="settings-box">
+        <div class="slides-wrapper">
+            <div class="slide active" data-slide-index="0">
+                <h1>Beginner Course</h1>
+                <p>Welcome! In this lesson you'll learn the essentials of poker. Total sub-lessons: 3.</p>
+                <button class="red-btn" data-next>Start Lesson 1.1 →</button>
+            </div>
+        </div>
+
+        <div class="slides-wrapper">
+            <div class="slide" data-slide-index="1">
+                <h2>What Is Poker?</h2>
+                <p>Poker is a card game where players bet chips based on hand strength.</p>
+                <div class="slide-controls">
+                    <button class="red-btn" data-prev>← Back</button>
+                    <button class="red-btn" data-next>Next →</button>
+                </div>
+            </div>
+        <div class="slides-wrapper">
+
+        <div class="slide" data-slide-index="2">
+          <h2>Game Objective</h2>
+          <p>The goal is to win chips by having the best hand or bluffing opponents.</p>
+          <div class="slide-controls">
+            <button class="red-btn" data-prev>← Back</button>
+            <button class="red-btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <div class="slide" data-slide-index="3">
+          <h2>Game Flow Overview</h2>
+          <p>Poker has rounds: deal, flop, turn, river, and showdown. Betting occurs before and after each.</p>
+          <div class="slide-controls">
+            <button class="red-btn" data-prev>← Back</button>
+            <button class="red-btn" data-next>Finish</button>
+          </div>
+        </div>
+
+        <div class="slide" data-slide-index="4">
+          <h2>You've Completed!</h2>
+          <p>Great work! You're now ready for intermediate poker.</p>
+          <div class="slide-controls">
+            <button class="red-btn">Go to Intermediate Course →</button>
+            <button class="red-btn">Retake Quiz</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/beginner-course.js"></script>
+</body>
+</html>

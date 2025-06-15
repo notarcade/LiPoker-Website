@@ -1,0 +1,173 @@
+body {
+    overflow: hidden;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-gray);
+}
+
+/* Login Box */
+.login-box {
+    background-color: var(--dark-gray);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 10vh;
+    width: 400px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(138, 138, 138);
+}
+
+.login-box:hover {
+    border: 2px solid var(--red);
+    transform: scale(1.03);
+}
+
+/* Title */
+.login-box h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Subheading */
+.subheading {
+    font-size: 14px;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #272727;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--light-gray);
+}
+
+input:focus {
+    border: 2px solid var(--red);
+}
+
+/* Login Button */
+.login-button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid white;
+    border-radius: 6px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+    background-color: var(--red);
+    color: white;
+    border: 2px solid var(--red);
+}
+
+/* Divider with horizontal lines */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #313131;
+    font-weight: 600;
+}
+
+/* Horizontal Lines */
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #313131;
+    margin: 0 10px;
+    border: 1px solid #313131;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Google & Facebook Buttons */
+.google-login, .facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 48%;
+    border: 2px solid #313131;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.google-login:hover, .facebook-login:hover {
+    background-color: #313131;
+}
+
+/* Social Login Icons */
+.google-login img, .facebook-login img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Signup Link */
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--light-gray);
+}
+
+.signup-link a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-link a:hover {
+    color: var(--red);
+}

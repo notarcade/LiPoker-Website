@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiPoker | Skill Test</title>
+  <link rel="stylesheet" href="/universal.css" />
+  <link rel="stylesheet" href="skill-test.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">
+        <a href="/home.html">
+          <span class="white">Li</span><span class="red">poker</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/main/play.html">Play</a>
+        <a href="/learn/skill-test.html">Learn</a>
+        <a href="/main/leaderboards.html">Leaderboard</a>
+        <a href="/main/premium.html">Premium</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="auth-buttons">
+        <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+        <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="skill-test">
+    <h1>Let’s Find Your Poker Skill Level</h1>
+    <p class="subheading">Answer a few quick questions to discover where to start.</p>
+
+    <form id="quiz-container">
+      <div class="question active">
+        <h2>1. Have you ever played any form of Poker?</h2>
+        <div class="options">
+          <button type="button" data-score="0">No, I'm brand new</button>
+          <button type="button" data-score="1">Yes, casually</button>
+          <button type="button" data-score="2">Yes, very often</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>2. Do you know the rules of Texas Hold'em?</h2>
+        <div class="options">
+          <button type="button" data-score="0">No, not really</button>
+          <button type="button" data-score="1">I sort of know</button>
+          <button type="button" data-score="2">Yes, I know it well</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>3. How do you usually play Poker?</h2>
+        <div class="options">
+          <button type="button" data-score="0">I’ve never played</button>
+          <button type="button" data-score="1">With friends or online casually</button>
+          <button type="button" data-score="2">In ranked or competitive formats</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>4. Can you identify a bluff vs a strong hand?</h2>
+        <div class="options">
+          <button type="button" data-score="0">No idea</button>
+          <button type="button" data-score="1">Sometimes</button>
+          <button type="button" data-score="2">Yes, I’m confident in this</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>5. How would you describe your Poker strategy?</h2>
+        <div class="options">
+          <button type="button" data-score="0">I don’t really have one</button>
+          <button type="button" data-score="1">I go with the flow</button>
+          <button type="button" data-score="2">I follow specific strategies</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="result" class="result-box hidden"></div>
+  </main>
+
+  <script src="/js/skill-test.js"></script>
+</body>
+</html>

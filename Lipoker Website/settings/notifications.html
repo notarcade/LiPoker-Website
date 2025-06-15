@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Notifications Settings</title>
+    <link rel="stylesheet" href="notifications.css">
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="settings-universal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Round&family=Material+Icons+Sharp&family=Material+Icons+Two+Tone" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-view">
+        <div class="settings-container">
+            <aside class="settings-sidebar">
+                <h2 class="settings-title">Settings</h2>
+                <ul>
+                    <a href="/settings/profile.html">
+                        <li><span class="material-icons-outlined">account_circle</span> Profile</li>
+                    </a>
+                    <a href="/settings/gameplay.html">
+                        <li><span class="material-icons-outlined">sports_esports</span> Gameplay</li>
+                    </a>
+                    <a href="/settings/social.html">
+                        <li><span class="material-icons-outlined">group</span> Social</li>
+                    </a>
+                    <a href="/settings/notifications.html">
+                        <li class="selected-nav"><span class="material-icons-outlined">notifications</span> Notifications</li>
+                    </a>
+                    <a href="/settings/membership.html">
+                        <li><span class="material-icons-outlined">diamond</span> Membership</li>
+                    </a>
+                </ul>
+                <div class="navbar-separator"></div>
+            </aside>
+            
+            <main class="settings-content">
+            <h2>Notifications Settings</h2>
+
+            <!-- Enable Browser Notifications -->
+            <section class="toggle-section">
+                <div class="toggle-wrapper">
+                    <p>Enable Browser Notifications</p>
+                    <button class="notification-btn" onclick="requestNotifications()">Activate</button>
+                </div>
+            </section>
+
+            <!-- Email Notifications -->
+            <section class="toggle-section">
+                <div class="toggle-wrapper">
+                    <p>Email Notifications</p>
+                    <span id="email-blur">a-example-z@example.com</span>
+                    <button class="notification-btn">Manage</button>
+                </div>
+            </section>
+
+            <div class="divider"></div> 
+
+            <!-- MANAGE ALL CHANNELS -->
+                <section class="dropdown-container">
+                    <button class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Manage All Channels</span>
+                        <span class="material-icons dropdown-arrow">expand_more</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Allow All Web Notifications</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Allow All Mobile Notifications</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Allow All Email Notifications</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- PLAY SECTION -->
+                <section class="dropdown-container">
+                    <button class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Play</span>
+                        <span class="material-icons dropdown-arrow">expand_more</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Game Invites and Rematch Requests</p>
+                                <div class="toggle active" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Turn Alerts</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Chip Refill Reminders</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- SOCIAL SECTION -->
+                <section class="dropdown-container">
+                    <button class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Social</span>
+                        <span class="material-icons dropdown-arrow">expand_more</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Friend Requests & Chat Messages</p>
+                                <div class="toggle active" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Club Invites & Team Messages</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                            <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Personal Blog Actions (e.g. comments)</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- OTHER SECTION -->
+                <section class="dropdown-container">
+                    <button class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Other</span>
+                        <span class="material-icons dropdown-arrow">expand_more</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Personal Leaderboard Changes</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>New Event & Tournament Announcements</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                        <section class="toggle-section">
+                            <div class="toggle-wrapper">
+                                <p>Special Offers & Promotions</p>
+                                <div class="toggle" onclick="this.classList.toggle('active')"><div class="slider"></div></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+            </main>
+        </div> 
+    </div>
+    <script>
+        function maskEmail() {
+            const emailElement = document.getElementById("email-blur");
+            const email = emailElement.textContent.trim(); // Get actual email
+
+            const [name, domain] = email.split("@");
+            if (name.length < 3) return; // Prevents issues with very short emails
+
+            const firstChar = name[0];
+            const lastChar = name[name.length - 1];
+            const maskedPart = "*".repeat(name.length - 2);
+
+            emailElement.textContent = `${firstChar}${maskedPart}${lastChar}@${domain}`;
+        }
+
+        // Run the function after the page loads
+        document.addEventListener("DOMContentLoaded", maskEmail);
+
+        function toggleDropdown(clickedHeader) {
+            const container = clickedHeader.closest('.dropdown-container');
+            const allDropdowns = document.querySelectorAll('.dropdown-container');
+
+            allDropdowns.forEach(drop => {
+                if (drop !== container) {
+                    drop.classList.remove('active');
+                }
+            });
+
+            container.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

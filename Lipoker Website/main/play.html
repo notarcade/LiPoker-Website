@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPoker | Play</title>
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="play.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="/home.html">
+                    <span class="white">Li</span><span class="red">poker</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/main/play.html">Play</a>
+                <a href="/learn/skill-test.html">Learn</a>
+                <a href="/main/leaderboards.html">Leaderboard</a>
+                <a href="/main/premium.html">Premium</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='/auth/login.html'">Log in</button>
+                <button class="signup" onclick="window.location.href='/auth/signup.html'">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="play-section">
+        <h1 class="play-title">Choose Your Game Mode</h1>
+
+        <section class="game-banner rounded-top">
+            <div class="game-info">
+                <h2>Classic Texas Hold'em</h2>
+                <p>Jump into the most iconic version of poker. Strategy, bluffing, and skill all in one table.</p>
+                <button class="play-btn">
+                    Play Classic
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+            <div class="game-img img1"></div>
+        </section>
+
+        <section class="game-banner rounded-bottom">
+            <div class="game-info">
+                <h2>Private Tables</h2>
+                <p>Invite-only tables for friends, training, or high-stakes club games.</p>
+                <button class="play-btn">
+                    Play Private
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+            <div class="game-img img5"></div>
+        </section>
+
+        <section class="game-banner">
+            <div class="game-info">
+                <h2>Random Matchmaking</h2>
+                <p>Perfect for anybody ready to take on any challenge.</p>
+                <button class="play-btn">
+                    Play Random
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+            <div class="game-img img2"></div>
+        </section>
+
+        <section class="game-banner">
+            <div class="game-info">
+                <h2>Tournament Arenas</h2>
+                <p>For risk-takers only. Big pots, elite players. Do you have what it takes?</p>
+                <button class="play-btn">
+                    Play Tournaments
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+            <div class="game-img img3"></div>
+        </section>
+    </main>
+</body>
+</html>
